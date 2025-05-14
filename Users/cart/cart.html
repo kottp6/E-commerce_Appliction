@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+  .modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+  }
+  .modal.hidden {
+    display: none;
+  }
+  .modal-content {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+  }
+  .modal-actions {
+    margin-top: 15px;
+    display: flex; justify-content: center; gap: 10px;
+  }
+  .modal-actions button {
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+<body>
+   
+    <h1>User Cart</h1>
+    
+    
+    <div id="loading">Loading...</div>
+    <div id="cart-wrapper">
+      <button class="delete-cart-btn" id="deleteCartBtn">Delete Cart</button>
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Stock</th> 
+            <th>Price (EGP)</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cart-body">
+          <!-- Cart items will be inserted here -->
+        </tbody>
+      </table>
+      <div id="total-price" style="margin-bottom: 20px;">
+        Total Price: <span id="total-value">0.00</span> EGP
+      </div>
+      <!--  -->
+      <a href="order-details.html" id="placeOrderBtn" class="place-order-btn">Place Order</a>
+    </div>
+
+    <div id="custom-modal" class="modal hidden">
+    <div class="modal-content">
+      <p id="modal-message"></p>
+      <div class="modal-actions">
+        <button id="modal-ok" style="padding: 10px 20px;border: none;border-radius: 8px;font-weight: bold;cursor: pointer;transition: all 0.3s ease; background-color: #28a745;color: white;">OK</button>
+        <button id="modal-cancel" class="hidden" style="padding: 10px 20px;border: none;border-radius: 8px;font-weight: bold;cursor: pointer;transition: all 0.3s ease; background-color: #dc3545;color: white;">Cancel</button>
+      </div>
+    </div>
+  </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

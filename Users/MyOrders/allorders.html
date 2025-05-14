@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="myOrders.css"/>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+          <i class="fa-solid fa-bars sidebarOpen"></i>
+          <span class="logo navLogo"><a href="#">Costco</a></span>
+          <div class="menu">
+              <div class="logo-toggle">
+                  <span class="logo"><a href="#">Costco</a></span>
+                  <i class="fa-solid fa-xmark siderbarClose"></i>
+              </div>
+              <ul class="nav-links">
+                  <li ><a onmouseover="this.style.backgroundColor='transparent'" href="../userHome/homeuser.html">Home</a></li>
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="../ViewProducts/viewProduts.html">Products</a></li>
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="../category/catagory.html">Categories</a></li>
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="../wishlist/wish-list.html">Wish List</a></li>
+                  <li><a  onmouseover="this.style.backgroundColor='transparent'" href="#">My Orders</a></li>
+                  <li class="liCart">
+                    <i style="color: #fff;" class="fa-solid fa-cart-shopping"><span style="background-color: green;" class="spanCart" id="numberOfCart"></span></i>
+
+                  </li>
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="../Profile/profile.html" id="userName">User</a></li>
+                  <li style="background-color: red; border-radius: 8px;padding: 10px;" onclick="logout()"><a onmouseover="this.style.backgroundColor='transparent'" href="#" >Logout</a></li>
+              </ul>
+          </div>
+          
+      </div>
+  </nav>
+
+  
+    <h1 style="margin-top: 80px; text-align: center;">My Orders</h1>
+    <table class="table-container">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Order ID</th>
+          <th>Order Price</th>
+          <th>Paid</th>
+          <th>Deliverd</th>
+          <th>Payment Method</th>
+          <th>Date</th>
+          <th>Items</th>
+          <th>Data Details</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+    
+      </tbody>
+      
+
+
+          
+    </table>
+  
+  
+    
+    <footer>
+      <p>2025 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+        //js code to toggle sidebar
+        sidebarOpen.addEventListener("click" , () =>{
+            nav.classList.add("active");
+        });
+        body.addEventListener("click" , e =>{
+            let clickedElm = e.target;
+            if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                nav.classList.remove("active");
+            }
+        });
+    </script>
+    
+    <script src="allorder.js"></script>
+  </body>
+</html>

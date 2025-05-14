@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+          <i class="fa-solid fa-bars sidebarOpen"></i>
+          <span class="logo navLogo"><a href="#">Costco</a></span>
+          <div class="menu">
+              <div class="logo-toggle">
+                  <span class="logo"><a href="#">Costco</a></span>
+                  <i class="fa-solid fa-xmark siderbarClose"></i>
+              </div>
+              <ul class="nav-links">
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="../ViewProducts/viewProduts.html">Home</a></li>
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="../ViewProducts/viewProduts.html">Products</a></li>
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="../category/catagory.html">Categories</a></li>
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="../wishlist/wish-list.html">Wish List</a></li>
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="../MyOrders/allorders.html">My Orders</a></li>
+                  <li class="liCart">
+                    <i style="color: #fff;" class="fa-solid fa-cart-shopping"><span style="background-color: green;" class="spanCart" id="numberOfCart"></span></i>
+                  </li>
+                  <li><a onmouseover="this.style.backgroundColor='transparent'" href="#" href="../Profile/profile.html" id="userName">User</a></li>
+                  <li style="background-color: red; border-radius: 8px;padding: 10px;" onclick="logout()"><a onmouseover="this.style.backgroundColor='transparent'" href="#" >Logout</a></li>
+              </ul>
+          </div>
+          
+      </div>
+  </nav>
+  <div class="login-container">
+    <div class="cont">
+      <h2>My Profile</h2>
+    <div>
+      <img style="border-radius: 50%; margin-top: 10px;" width="150" src="../../images/kottp.jpg" alt="">
+    </div>
+    <div class="data" style="margin-top: 10px;">
+      <h2 id="name"></h2>
+      <p id="email" style="margin-top: 10px;"></p>
+      <p id="phone" style="margin-top: 10px;"></p>
+    </div>
+    </div>
+    
+  </div>
+    
+  </body>
+  <script src="profile.js"></script>
+  <script>
+      
+    const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+          body.classList.add("dark");
+        }
+      // js code to toggle dark and light mode
+     
+    
+      //js code to toggle sidebar
+      sidebarOpen.addEventListener("click" , () =>{
+          nav.classList.add("active");
+      });
+      body.addEventListener("click" , e =>{
+          let clickedElm = e.target;
+          if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+              nav.classList.remove("active");
+          }
+      });
+
+
+  </script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+          <i class="fa-solid fa-bars sidebarOpen"></i>
+          <span class="logo navLogo"><a href="#">Costco</a></span>
+          <div class="menu">
+              <div class="logo-toggle">
+                  <span class="logo"><a href="#">Costco</a></span>
+                  <i class="fa-solid fa-xmark siderbarClose"></i>
+              </div>
+              <ul class="nav-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="../ViewProducts/viewProduts.html">Products</a></li>
+                  <li><a href="../category/catagory.html">Categories</a></li>
+                  <li><a href="../wishlist/wish-list.html">Wish List</a></li>
+                  <li><a href="../MyOrders/allorders.html">My Orders</a></li>
+                  <li class="liCart">
+                    <i style="color: #fff;" class="fa-solid fa-cart-shopping" onclick="window.location.href='../cart/cart.html'"><span style="background-color: green;" class="spanCart" id="numberOfCart"></span></i>
+                  </li>
+                  <li><a  href="../Profile/profile.html" id="userName">User</a></li>
+                  <li style="background-color: red; border-radius: 8px;padding: 10px;" onclick="logout()"><a href="#" >Logout</a></li>
+              </ul>
+          </div>
+          
+      </div>
+  </nav>
+    
+<!-- start slider image of products -->
+<h2>Latest Products</h2>  
+<div class="cont">
+<div class="box">
+  <span style="--i:1;"><img src="image/12e32f6d3d0adccb750dd18703891725.jpg" alt=""></span>
+  <span style="--i:2;"><img src="image/250aca3408f9ff4b967c0763a9123c8a.jpg" alt=""></span>
+  <span style="--i:3;"><img src="image/493726f5f9458872e17f4c3461a5c6cf.jpg" alt=""></span>
+  <span style="--i:4;"><img src="image/4d6158604d738f01fdf02cb6080a09e9.jpg" alt=""></span>
+  <span style="--i:5;"><img src="image/911a7f0fd7a1d2aac5a9c04b224ad7e8.jpg" alt=""></span>
+  <span style="--i:6;"><img src="image/تنسيقات ملابس كاجوال للمحجبات.webp" alt=""></span>
+  <span style="--i:7;"><img src="image/صور-ملابس-محجبات-كاجوال-شيك-آخر-موضة.jpg" alt=""></span>
+  <span style="--i:8;"><img src="image/لبس محجبات كاجوال.webp" alt=""></span>
+
+</div>  
+</div>
+<!-- end slider image of products -->
+
+    <div id="loader" class="loader"></div>
+
+    
+       <div class="container">
+        <div class="added-item-alert">Item added to Cart</div>
+        <div class="searchBarAndCategory">
+          <input id="search" type="search"  placeholder="Search Here " />
+          <div class="filteration">
+            <label for="categorySelect"> Category</label>
+            <select class="Select" id="categorySelect">
+              <option value="">Choose</option>
+            </select>
+          </div> 
+        </div>
+        
+        <div id="productsContainer" style="display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center; 
+        padding: 10px;"></div>
+      </div>
+          <div class="listProduct">
+  
+          </div>
+      <div id="listProduct" class="listProduct">
+          
+      </div>
+    
+   
+    <div id="cartModal" class="modal" style="display: none; position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); justify-content: center;
+      align-items: center; z-index: 1000;">
+      <div style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+        <p>Product added to cart successfully!</p>
+        <button id="closeCartModal">OK</button>
+      </div>
+    </div>
+    
+    <script src="home.js"></script>
+    
+  </body>
+</html>
+

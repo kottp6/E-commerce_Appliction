@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="shipping.css" />
+  </head>
+  <body>
+    <!-- <header>
+      <nav>
+        <h1>Costco</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="../View Products/viewProduts.html">Products</a></li>
+          <li><a href="#services">Wish List</a></li>
+          <li><a href="../My Orders/myOrders.html">My Orders</a></li>
+        </ul>
+        <div class="lastSection">
+          <a href="../Profile/profile.html">
+            <div class="profileDiv">
+              <span class="user-name">User</span>
+              <img style="width: 25px" src="/assets/profile.png" alt="" />
+            </div>
+          </a>
+          <button class="logoutBtn">LogOut</button>
+        </div>
+      </nav>
+    </header> -->
+    <nav>
+      <div class="nav-bar">
+          <i class="fa-solid fa-bars sidebarOpen"></i>
+          <span class="logo navLogo"><a href="#">Costco</a></span>
+          <div class="menu">
+              <div class="logo-toggle">
+                  <span class="logo"><a href="#">Costco</a></span>
+                  <i class="fa-solid fa-xmark siderbarClose"></i>
+              </div>
+              <ul class="nav-links">
+                  <li><a href="../ViewProducts/viewProduts.html">Home</a></li>
+                  <li><a href="../ViewProducts/viewProduts.html">Products</a></li>
+                  <li><a href="../category/catagory.html">Categories</a></li>
+                  <li><a href="../wishlist/wish-list.html">Wish List</a></li>
+                  <li><a href="#">My Orders</a></li>
+                  <li class="liCart">
+                    <i style="color: #fff;" class="fa-solid fa-cart-shopping"><span style="background-color: green;" class="spanCart"></span></i>
+                  </li>
+                  <li><a href="../Profile/profile.html" id="userName">User</a></li>
+                  <li style="background-color: red; border-radius: 8px;padding: 10px;" onclick="logout()"><a href="#" >Logout</a></li>
+              </ul>
+          </div>
+          
+      </div>
+  </nav>
+    
+
+    <div>
+      <h1 style="text-align: center; margin-top: 200px;">Checkout</h1>
+  </div>
+
+  <form id="checkoutForm">
+      <div>
+          <label for="details" class="">Enter Your Details</label>
+          <input type="text" id="details" name="details" class="" placeholder="ex : Mahmoud Hussein"/>
+      </div>
+
+      <div>
+          <label for="city" class="">Enter Your City</label>
+          <input type="text" id="city" name="city" class="" placeholder="ex: cairo"/>
+      </div>
+
+      <div>
+          <label for="phone" class="">Enter Your Phone</label>
+          <input type="text" id="phone" name="phone" class="" placeholder="ex: 01288845234"/>
+      </div>
+
+      <div class="online">
+        <input type="checkbox"  id="isOnline" />
+
+        <label for="isOnline" style="margin-left: 235px;">Is Pay Online</label>
+          
+      </div>
+
+      <button type="submit" id="submitButton">
+          Pay Cash
+      </button>
+  </form>
+  
+
+  <div id="errorMessage"></div>
+
+    
+
+    
+    <script>
+      
+      const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        modeToggle = document.querySelector(".dark-light"),
+        searchToggle = document.querySelector(".searchToggle"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+        let getMode = localStorage.getItem("mode");
+            if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+        // js code to toggle dark and light mode
+       
+      
+        //js code to toggle sidebar
+        sidebarOpen.addEventListener("click" , () =>{
+            nav.classList.add("active");
+        });
+        body.addEventListener("click" , e =>{
+            let clickedElm = e.target;
+            if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                nav.classList.remove("active");
+            }
+        });
+
+
+    </script>
+    <script src="shipping.js"></script>
+  </body>
+</html>

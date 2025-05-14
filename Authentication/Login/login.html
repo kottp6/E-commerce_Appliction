@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class="fa-solid fa-bars sidebarOpen"></i>
+            <span class="logo navLogo"><a href="#">Costco</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Costco</a></span>
+                    <i class="fa-solid fa-xmark siderbarClose"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html">About Us</a></li>
+                    <li><a href="../../index.html">Services</a></li>
+                    <li><a href="../../index.html">Products</a></li>
+                    <li><a href="../../index.html">Testimonials</a></li>
+                    <li><a href="../../index.html">Contact</a></li>
+                    <li><a href="../Login/login.html" >Login</a></li>
+                    <li><a href="../Registration/registration.html">Register</a></li>
+
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+   
+
+    <div class="container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Enter Your Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="ex: mo@gmail.com">
+                    <i id="emailIcon" class="fa icon"></i>
+                </div>
+                <small class="error-text" id="emailError"></small>
+            </div>
+    
+            <div class="form-group">
+                <label for="password">Enter Your Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="*********">
+                    <i id="passwordIcon" class="fa icon"></i>
+                </div>
+                <small class="error-text" id="passwordError"></small>
+            </div>
+    
+            <div id="errorMessage" style="color: red; font-size: 14px; text-align: center; margin-bottom: 10px;"></div>
+    
+            <button type="submit" id="submitBtn" disabled>Login</button>
+        </form>
+    
+        <div class="forgetPass">
+            <p>Don't have an account? <a href="../Registration/registration.html">Register</a></p>
+            <p><a href="../ForgetPassword/forgetPassword.html">Forgot Password</a></p>
+        </div>
+    
+        <div id="successModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h2>Login Successful!</h2>
+                <p>You will be redirected to your dashboard.</p>
+                <button id="closeModalBtn" class="btn">OK</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

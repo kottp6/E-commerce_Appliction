@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<style>
+    .styled-select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.styled-select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+</style>
+<body>
+
+    
+    <div class="parent-product">
+        <div class="Product-container">
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+                <input class="Prod-input" type="text" id="productId" placeholder="Product ID" required>
+                <input class="Prod-input" type="text" id="productName" placeholder="Product Name" required>
+                <input class="Prod-input" type="number" id="productPrice" placeholder="Product Price" required>
+                <!-- <input class="Prod-input" type="text" id="productCategory"  placeholder="Category of Product" required> -->
+                <select id="product-category" required class="styled-select">
+                    <option value="">Loading...</option>
+                </select>
+                <input class="Prod-input" type="text" id="productQuantity" placeholder="Quantity of Product" required>
+                <input class="Prod-input" type="text" id="productImage" placeholder="Image of Product" required>
+                <textarea class="Prod-input" id="productDesc" placeholder="Description of Product" required></textarea>
+                <button class="Prod-button" type="button" onclick="addProduct(event)">Add Product</button>
+            </form>
+            
+
+            <div id="errorMessage" style="display: none; color: red;"></div>
+            <div id="successMessage" style="display: none; color: green;">Product added successfully!</div>
+        </div>
+    </div>
+    
+    <script src="js/displayProducts.js"></script>
+</body>
+</html>

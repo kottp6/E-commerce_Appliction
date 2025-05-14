@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="checkOut.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+          <i class="fa-solid fa-bars sidebarOpen"></i>
+          <span class="logo navLogo"><a href="#">Costco</a></span>
+          <div class="menu">
+              <div class="logo-toggle">
+                  <span class="logo"><a href="#">Costco</a></span>
+                  <i class="fa-solid fa-xmark siderbarClose"></i>
+              </div>
+              <ul class="nav-links">
+                  <li><a href="../ViewProducts/viewProduts.html">Home</a></li>
+                  <li><a href="../ViewProducts/viewProduts.html">Products</a></li>
+                  <li><a href="../wishlist/wish-list.html">Wish List</a></li>
+                  <li><a href="#">My Orders</a></li>
+                  <li class="liCart">
+                    <i style="color: #fff;" class="fa-solid fa-cart-shopping"><span style="background-color: green;" class="spanCart"></span></i>
+                  </li>
+                  <li><a href="#" id="userName">User</a></li>
+                  <li style="background-color: red; border-radius: 8px;padding: 10px;" onclick="logout()"><a href="#" >Logout</a></li>
+              </ul>
+          </div>
+          
+      </div>
+  </nav>
+    
+    
+    <div class="container">
+      <div class="productsContainer">
+
+      </div>
+      <div class="detials">
+        <h3>Subtotal:</h3>
+        <p>1845$</p>
+      </div>
+      <div class="shopingAndNext">
+        <button class="shoppingBtn">Continue Shopping</button>
+        <button class="next">
+          <a  href="../shipping/shipping.html">Next Step</a>
+        </button>
+      </div>
+    </div>
+    <script>
+      
+      const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        modeToggle = document.querySelector(".dark-light"),
+        searchToggle = document.querySelector(".searchToggle"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+        let getMode = localStorage.getItem("mode");
+            if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+        // js code to toggle dark and light mode
+       
+      
+        //js code to toggle sidebar
+        sidebarOpen.addEventListener("click" , () =>{
+            nav.classList.add("active");
+        });
+        body.addEventListener("click" , e =>{
+            let clickedElm = e.target;
+            if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                nav.classList.remove("active");
+            }
+        });
+
+
+    </script>
+    <script src="checkOut.js"></script>
+
+  </body>
+</html>

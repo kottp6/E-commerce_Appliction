@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/products.css">
+    <title>Products</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="../Dashboard/dashboard.html">Dashboard</a></li>
+            <li style="width: 100%; background-color: #CCC; border-radius: 10px;"><a style="color: #000;" href="products.html">Products</a></li>
+            <li><a href="../Categories/categories.html">Categories</a></li>
+            <li><a href="../Orders/orders.html">Manage Orders</a></li>
+            <li><a  href="../placeOrder/placeOrder.html">Place Orders</a></li>
+
+        </ul>
+    </div>
+
+    
+    <div id="loader" class="loader"></div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Manage Products</h1>
+        </header>
+
+        
+       <br>
+        <div class="search">
+            <label class="labelForm" for="search">Search For Product Name :</label>
+            <input class="inputForm" oninput="searchProduct(this.value)" type="search" id="search" placeholder="search by name...">
+        </div>
+        <div class="btnP">
+            <button class="btnForm" id="add-pro" onclick="window.location.href='addProducts.html'"> Add Product</button>
+
+        </div> 
+        <div class="container">
+            <div id="card__container" class="card__container">
+               
+               
+            </div>
+        </div>
+        
+        <div id="productModal">
+            <div id="modalContent">
+                <button onclick="closeModal()" style="margin-top: 10px;">Close</button>
+            </div>
+        </div> 
+    </div>
+    
+    <script src="js/displayProducts.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+    <header>
+        <nav>
+            <h1 style="color: #fff;">Costco</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#shop">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contacts">Contact</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <!-- <li><a href="#cart">Cart</a></li> -->
+            </ul>
+            <div>
+                <button class="btn login"><a style="color: #fff; text-decoration: none;" href="./Authentication/Login/login.html">login</a></button>
+                <button class="btn reg"><a style="color: #fff; text-decoration: none;" href="./Authentication/Registration/registration.html">Register</a></button>
+            </div>
+           
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="content">
+            <h1>Welcome to Our <br> Costco</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Accusamus aliquid quam deleniti repellendus similique ad obcaecati omnis quasi, 
+                placeat voluptas facilis assumenda aut suscipit. Asperiores eius placeat 
+                ipsam sunt soluta!
+            </p>
+            <button class="hero-btn">Contact Us</button>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="aboutList">
+            <div class="content">
+                <p>
+                    We are dedicated to bringing you the best products at the best prices.
+                    We are dedicated to bringing you the best products at the best prices.
+                    We are dedicated to bringing you the best products at the best prices.
+                    We are dedicated to bringing you the best products at the best prices.
+                    We are dedicated to bringing you the best products at the best prices.
+                    We are dedicated to bringing you the best products at the best prices.
+                </p>
+            </div>
+    
+            <div class="container">
+                <div class="wrapper">
+                    <img src="images/f1.jpg" alt="">
+                    <img src="images/f2.jpg" alt="">
+                    <img src="images/f3.jpg" alt="">
+                    <img src="images/f1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+      
+    </section>
+    <!-- //////////////////// -->
+
+    <section id="products" class="products">
+        <h2>Latest Products</h2>
+        <div class="listProduct"></div>
+        
+    </section>
+
+    <section id="arrivals" class="arrivals">
+        <div class="arrival">
+            <div class="image">
+                <img src="images/saving-img.png" alt="">
+            </div>
+            <div class="content">
+                <h2>Best Savings <br> on new arrivals</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing 
+                elit. Voluptates libero voluptatibus suscipit dolore 
+                reiciendis sequi, veniam tenetur officiis. Provident 
+                expedita nemo eius officia! Fugiat quis dolorum autem 
+                veniam reprehenderit quos!
+                </p>
+                <button class="arrBtn">Buy Now</button>
+                <button class="arrBtn2">See More</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="shop" class="shop">
+        <h2>Why Shop With Us</h2>
+        <div class="shops">
+            <div class="shopItem">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>variations of passages of Lorem Ipsum <br> available</p>
+            </div>
+            <div class="shopItem">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <h3>Free Shiping</h3>
+                <p>variations of passages of Lorem Ipsum <br> available</p>
+            </div>
+            <div class="shopItem">
+                <i class="fa-solid fa-medal"></i>
+                <h3>Best Quality</h3>
+                <p>variations of passages of Lorem Ipsum <br> available</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gifts" class="gifts">
+        <div class="gift">
+            <div class="image">
+                <img width="400" src="images/gifts.png" alt="">
+            </div>
+            <div class="content">
+                <h2>Gifts for your <br> loved ones</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing 
+                elit. Voluptates libero voluptatibus suscipit dolore 
+                reiciendis sequi, veniam tenetur officiis. Provident 
+                expedita nemo eius officia! Fugiat quis dolorum autem 
+                veniam reprehenderit quos!
+                </p>
+                <button class="giftBtn">Buy Now</button>
+                <button class="giftBtn2">See More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <h2>Contact Us</h2>
+        <div class="contact-wrap">
+            
+            <div class="contact-in">
+                <h1>Send a Message</h1>
+                <form id="contactForm">
+                    <input type="text"  name="fullName" placeholder="Full Name" class="contact-in-input">
+                    <input type="text" name="email" placeholder="Email" class="contact-in-input">
+                    <input type="text" name="subject" placeholder="Subject" class="contact-in-input">
+                    <textarea name="message" placeholder="Message" class="contact-in-textarea"></textarea>
+                    <input type="submit" value="SUBMIT" class="contact-in-btn">
+                   
+                </form>
+                <button id="afterSubmitBtn" style="display: none; margin-top: 10px; display: none; margin-top: 10px;  margin: 10px auto; text-align: center;">Message sent successfully</button>
+            </div>
+            <div class="contact-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923192776!2d77.06889754725782!3d28.52758200617607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1601968196548!5m2!1sen!2sin" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="title">What our clients say</h2>
+            </div>
+            <div class="testimonials-content">
+                <div class=" swiper testimonials-slider js-testimonials-slider">
+                    <div class="swiper-wrapper">
+                        <div class="testimonials-item swiper-slide">
+                            <div class="info">
+                                <img width="200" src="images/kottp.jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">Mahmoud Hussein</h3>
+                                    <span class="job">WebDeveloper</span>
+                                </div>
+                            </div>
+                            <p>
+                                "This is my second time ordering from your store, and once again, I’m beyond happy. The items are exactly as described, and even better in real life. Fast shipping, secure packaging, and great communication—thank you for such an amazing service!"
+                            </p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="testimonials-item swiper-slide">
+                            <div class="info">
+                                <img width="200" src="images\download (2).jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">Ahmed Ali </h3>
+                                    <span class="job">Graphic Designer</span>
+                                </div>
+                            </div>
+                            <p>
+                                "I was truly impressed by the quality of the product I received. The material feels premium, and the packaging was neat and professional. Delivery was fast, and I could track every step. I’ll definitely recommend your store to my friends and family!"
+                            </p> 
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                        </div>
+
+                    
+                        
+                  
+                        <div class=" swiper-slide testimonials-item">
+                            <div class="info">
+                                <img width="200" src="images\images (3).jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">عبد العزيز سلمان</h3>
+                                    <span class="job">Marketing Manager</span>
+                                </div>
+                            </div>
+                            <p>
+                                "بصراحة تجربتي مع المتجر كانت مرره رائعه من يوم ما دخلت الموقع وكل شيء واضح وسهل، ترتيب المنتجات وجودة الصور تساعد الواحد يقرر بسرعة. طلبت كم قطعة وجاتني في وقت قياسي والتغليف كان مرتب وأنيق. الجودة فوق التوقعات والأسعار مناسبة جدًا. بعد التجربة هذي، صار هذا المتجر خياري الأول لكل مشترياتي. يعطيكم العافية وما قصرتوا، شغلكم يبيض الوجه."
+                            </p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+
+                        </div>
+                        <div class=" swiper-slide testimonials-item">
+                            <div class="info">
+                                <img width="200" src="images\pngtree-business-daytime-female-staff-office-indoor-etiquette-photograph-with-picture-picture-image_1522667.jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">Lìhuá Huá</h3>
+                                    <span class="job">WebDeveloper</span>
+                                </div>
+                            </div>
+                            <p>
+                                "我对这个电商平台非常满意！从浏览商品、下单到收货的整个过程都非常顺畅。产品质量非常好，包装也很用心。客服的回复速度很快，服务态度也很亲切。这是我少有的在网上购物时感到非常安心的一次体验。以后还会继续支持你们，真的很棒！"
+
+
+                            </p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    
+                        <div class=" swiper-slide testimonials-item">
+                            <div class="info">
+                                <img width="200" src="images\download.jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">Mohamed Khaled</h3>
+                                    <!-- <span class="job">WebDeveloper</span> -->
+                                </div>
+                            </div>
+                            <p>
+                                
+                              From the moment I placed my order to the time it arrived, everything went flawlessly. The updates via email kept me informed, and the product exceeded my expectations. It's great to find an online store that truly values its customers.
+                            </p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+
+                        </div>
+                        <div class=" swiper-slide testimonials-item">
+                            <div class="info">
+                                <img width="200" src="images\download (1).jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">Sarah Ahmed</h3>
+                                    <span class="job">WebDeveloper</span>
+                                </div>
+                            </div>
+                            <p>
+                                Excellent customer service! I had a small issue with my order, but your team responded quickly and resolved everything professionally. It’s rare to find this level of support nowadays. I really appreciate your dedication to customer satisfaction.
+                            </p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination js-testimonials-pagination"></div>
+            </div>
+        </div>
+    </section>
+     <footer>
+        <p>&copy; 2025 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.js-testimonials-slider', {
+            grabCursor : true,
+            spaceBetween : 30,
+            pagination : {
+                el:'.js-testimonials-pagination',
+                clickable : true,
+            },
+            breakpoints:{
+                767:{
+                    slidesPerView : 2
+                }
+            }
+        })              
+  </script>
+ <script src="js/script.js"></script>
+</body>
+</html>

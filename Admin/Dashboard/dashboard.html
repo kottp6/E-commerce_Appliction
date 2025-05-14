@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/dash.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="adminTitle">Admin Panel</h2>
+        <ul>
+            <li style="width: 100%; background-color: #CCC; border-radius: 10px;"><a style="color: #000;" href="#">Dashboard</a></li>
+            <li><a href="../Products/products.html">Products</a></li>
+            <li><a href="../Categories/categories.html">Categories</a></li>
+            <li><a href="../Orders/orders.html">Manage Orders</a></li>
+            <li><a  href="../placeOrder/placeOrder.html">Place Orders</a></li>
+
+        </ul>
+    </div>
+    <h1 class="titleDash">Dashboard</h1>
+
+    <div id="loader" class="loader"></div>
+
+    <div class="cards">
+        <div class="card">
+               <div>
+                <i class="fa-solid fa-users"></i>
+                <h3 class="userLength" id="userLength"></h3>
+            </div>
+        </div>
+        <div class="card">
+            
+            <div>
+                <i class="fa-brands fa-elementor"></i>
+                <h3 class="userLength" id="proLength"></h3>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <i class="fas fa-shopping-cart"></i>
+                <h3 class="userLength" id="catLength"></h3>
+            </div>
+        </div>
+        <div class="card">
+           
+            <div>
+                <i class="fas fa-check-circle"></i>
+                <h3 class="userLength" id="orderLength"></h3>
+            </div>
+        </div>
+    </div>
+    <div class="search">
+        <label class="labelForm" for="search">Search For user Name :</label>
+        <input class="inputForm" oninput="searchUser(this.value)" type="search" id="searchBox" placeholder="search by name...">
+    </div>
+    <div class="table-container">
+        <h2>Some User</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Create At</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                
+            </tbody>
+        </table>
+    </div>
+    
+
+    <script src="dash.js"></script>
+</body>
+</html>

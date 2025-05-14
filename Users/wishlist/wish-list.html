@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="wishlist.css">
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+       h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 80px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: auto;
+
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    img {
+      width: 60px;
+      height: auto;
+      border-radius: 4px;
+    }
+    button {
+  padding: 6px 12px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: darkred;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.modal .btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn.yes {
+  background-color: crimson;
+  color: white;
+}
+
+.btn.no {
+  background-color: lightgray;
+  color: black;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav-bar">
+          <i class="fa-solid fa-bars sidebarOpen"></i>
+          <span class="logo navLogo"><a href="#">Costco</a></span>
+          <div class="menu">
+              <div class="logo-toggle">
+                  <span class="logo"><a href="#">Costco</a></span>
+                  <i class="fa-solid fa-xmark siderbarClose"></i>
+              </div>
+              <ul class="nav-links">
+                  <li><a href="../userHome/homeuser.html">Home</a></li>
+                  <li><a href="../ViewProducts/viewProduts.html">Products</a></li>
+                  <li><a href="../category/catagory.html">Categories</a></li>
+
+                  <li><a href="../wishlist/wish-list.html">Wish List</a></li>
+                  <li><a href="../MyOrders/allorders.html">My Orders</a></li>
+                  <li class="liCart">
+                    <i style="color: #fff;" class="fa-solid fa-cart-shopping"><span style="background-color: green;" class="spanCart" id="numberOfCart"></span></i>
+
+                  </li>
+                  <li><a href="../Profile/profile.html" id="userName">User</a></li>
+                  <li style="background-color: red; border-radius: 8px;padding: 10px;" onclick="logout()"><a href="#" >Logout</a></li>
+              </ul>
+          </div>
+          
+      </div>
+  </nav>
+    
+
+    <h2>Your Wishlist</h2>
+    <div id="wishlistContainer"></div>
+
+
+    <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to remove this item from your wishlist?</p>
+      <div class="modal-buttons">
+        <button id="confirmYes" class="btn yes">Yes</button>
+        <button id="confirmNo" class="btn no">No</button>
+      </div>
+    </div>
+  </div>
+     
+        <script>
+      const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+        //js code to toggle sidebar
+        sidebarOpen.addEventListener("click" , () =>{
+            nav.classList.add("active");
+        });
+        body.addEventListener("click" , e =>{
+            let clickedElm = e.target;
+            if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                nav.classList.remove("active");
+            }
+        });
+    </script>
+    <script src="cart.js"></script>
+  </body>
+</html>

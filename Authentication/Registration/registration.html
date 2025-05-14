@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/register.css">
+
+    <style>
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class="fa-solid fa-bars sidebarOpen"></i>
+            <span class="logo navLogo"><a href="#">Costco</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Costco</a></span>
+                    <i class="fa-solid fa-xmark siderbarClose"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html">About Us</a></li>
+                    <li><a href="../../index.html">Services</a></li>
+                    <li><a href="../../index.html">Products</a></li>
+                    <li><a href="../../index.html">Testimonials</a></li>
+                    <li><a href="../../index.html">Contact</a></li>
+                    <li><a href="../Login/login.html" >Login</a></li>
+                    <li><a href="#">Register</a></li>
+
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Registration</h1>
+        <form id="registerForm">
+
+            <div class="form-group">
+                <label for="name">Enter Your Name</label>
+                <div class="input-wrapper">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="ex: Mahmoud Hussein"><br>
+                    <i id="nameIcon" class="fa icon"></i>
+                </div>
+                <small class="error-text" id="nameError"></small><br>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Enter Your Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="ex: mo@gmail.com"><br>
+                    <i id="emailIcon" class="fa icon"></i>
+                </div>
+                <small class="error-text" id="emailError"></small><br>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Enter Your Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="*********"><br>
+                    <i id="passwordIcon" class="fa icon"></i>
+                </div>
+                <small class="error-text" id="passwordError"></small><br>
+            </div>
+
+            <div class="form-group">
+                <label for="rePassword">Confirm Your Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="rePassword" name="rePassword" class="form-control" placeholder="*********"><br>
+                    <i id="rePasswordIcon" class="fa icon"></i>
+                </div>
+                <small class="error-text" id="rePasswordError"></small><br>   
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Enter Your Phone</label>
+                <div class="input-wrapper">
+                    <input type="text" id="phone" name="phone" class="form-control" placeholder="ex: 01288845234"><br>
+                    <i id="phoneIcon" class="fa icon"></i>
+                </div>
+                <small class="error-text" id="phoneError"></small><br>
+            </div>
+
+            <button type="submit" id="submitBtn">Register</button>
+
+            <p style="text-align: center;">Already have an Account ? <span><a style="color: #218838;" href="../Login/login.html">Login</a></span></p>
+            <div id="error-message" style="text-align: center; color: red; margin-top: 10px;"></div>
+        </form>
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h2>Registration Successful!</h2>
+                <p>You will be redirected to the login page.</p>
+                <button id="closeModalBtn" class="btn">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="registration.js"></script>
+</body>
+</html>

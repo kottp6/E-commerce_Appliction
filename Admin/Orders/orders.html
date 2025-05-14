@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/orders.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="adminTitle">Admin Panel</h2>
+        <ul>
+            <li><a href="../Dashboard/dashboard.html">Dashboard</a></li>
+            <li><a href="../Products/products.html">Products</a></li>
+            <li><a href="../Categories/categories.html">Categories</a></li>
+            <li style="width: 100%; background-color: #CCC; border-radius: 10px"><a style="color: #000;" href="#">Manage Orders</a></li>
+            <li><a  href="../placeOrder/placeOrder.html">Place Orders</a></li>
+
+        </ul>
+    </div>
+    <h1 class="titleDash">Manage Orders</h1>
+
+    <table class="table-container" style="margin-left: 350px;">
+        <thead>
+          <tr >
+            <th>Index</th>
+            <th>Order ID</th>
+            <th>Order Price</th>
+            <th>Paid</th>
+            <th>Deliverd</th>
+            <th>Payment Method</th>
+            <th>Date</th>
+            <th>Items</th>
+            <th>Data Details</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- <tr>
+            <th>Order ID</th>
+            <th>Order Price</th>
+            <th>Paid or Not Paid</th>
+            <th>Deliverd or not Deliverd</th>
+            <th>Payment Method</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr> -->
+        </tbody>
+        
+    
+    
+            
+    </table>
+    <div style="margin-top: 20px; margin-left: 350px; text-align: center;" id="paginationControls">
+        <button id="prevBtn" style="background-color: forestgreen; padding:10px 20px;">Prev</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn" style="background-color: forestgreen; padding:10px  20px;">Next</button>
+    </div>
+
+    <div id="loader" class="loader"></div>
+    <script src="orders.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/orders.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="adminTitle">Admin Panel</h2>
+        <ul>
+            <li><a href="../Dashboard/dashboard.html">Dashboard</a></li>
+            <li><a href="../Products/products.html">Products</a></li>
+            <li><a href="../Categories/categories.html">Categories</a></li>
+            <li><a  href="../Orders/orders.html">Manage Orders</a></li>
+            <li style="width: 100%; background-color: #CCC; border-radius: 10px"><a style="color: #000;"  href="../placeOrder/placeOrder.html">Place Orders</a></li>
+
+        </ul>
+    </div>
+    <h1 class="titleDash">Manage Orders</h1>
+    <div class="container">
+      <table border="1" id="ordersTable"></table>
+    </div>
+    
+    <div id="loader" class="loader"></div>
+    <script src="placeOrder.js"></script>
+</body>
+</html>

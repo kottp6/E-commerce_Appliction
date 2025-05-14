@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="productDetails.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+          <i class="fa-solid fa-bars sidebarOpen"></i>
+          <span class="logo navLogo"><a href="#">Costco</a></span>
+          <div class="menu">
+              <div class="logo-toggle">
+                  <span class="logo"><a href="#">Costco</a></span>
+                  <i class="fa-solid fa-xmark siderbarClose"></i>
+              </div>
+              <ul class="nav-links">
+                  <li><a href="../ViewProducts/viewProduts.html">Home</a></li>
+                  <li><a href="../ViewProducts/viewProduts.html">Products</a></li>
+                  <li><a href="../wishlist/wish-list.html">Wish List</a></li>
+                  <li><a href="../MyOrders/allorders.html">My Orders</a></li>
+                  <li class="liCart">
+                    <i style="color: #fff;" class="fa-solid fa-cart-shopping"><span style="background-color: green;" class="spanCart"></span></i>
+                  </li>
+                  <li><a  href="../Profile/profile.html" id="userName">User</a></li>
+                  <li style="background-color: red; border-radius: 8px;padding: 10px;" onclick="logout()"><a href="#" >Logout</a></li>
+              </ul>
+          </div>
+          
+      </div>
+  </nav>
+    <div class="containerCart">
+      <div class="cart">
+        <div class="header">
+          <div class="firstHeader">
+            <h3>My Basket</h3>
+            <p class="countItems">(10 items)</p>
+          </div>
+          <div class="secondHeader">
+            <button id="close">Close</button>
+            <button id="clearBasket" class="clearBtn">Clear Basket</button>
+          </div>
+        </div>
+        <div id="cartItems" class="productList">
+          <div class="productInfo">
+            <div class="btns">
+              <button class="PlusBtn">+</button>
+              <button class="minBtn">-</button>
+            </div>
+            <img src="../assets/team-1.png" alt="" />
+            <div class="titleAndqAndNum">
+              <h3>title</h3>
+              <p>Quantity</p>
+              <p>5</p>
+            </div>
+            <div class="price">
+              <p>price</p>
+              <p>250</p>
+            </div>
+            <button onclick="removeProduct(this)" class="xBtn">X</button>
+          </div>
+          <div class="productInfo">
+            <div class="btns">
+              <button class="PlusBtn">+</button>
+              <button class="minBtn">-</button>
+            </div>
+            <img src="../assets/team-1.png" alt="" />
+            <div class="titleAndqAndNum">
+              <h3>title</h3>
+              <p>Quantity</p>
+              <p>5</p>
+            </div>
+            <div class="price">
+              <p>price</p>
+              <p>250</p>
+            </div>
+            <button onclick="removeProduct(this)" class="xBtn">X</button>
+          </div>
+          <div class="productInfo">
+            <div class="btns">
+              <button class="PlusBtn">+</button>
+              <button class="minBtn">-</button>
+            </div>
+            <img src="../assets/team-1.png" alt="" />
+            <div class="titleAndqAndNum">
+              <h3>title</h3>
+              <p>Quantity</p>
+              <p>5</p>
+            </div>
+            <div class="price">
+              <p>price</p>
+              <p>250</p>
+            </div>
+            <button onclick="removeProduct(this)" class="xBtn">X</button>
+          </div>
+          <div class="productInfo">
+            <div class="btns">
+              <button class="PlusBtn">+</button>
+              <button class="minBtn">-</button>
+            </div>
+            <img src="../assets/team-1.png" alt="" />
+            <div class="titleAndqAndNum">
+              <h3>title</h3>
+              <p>Quantity</p>
+              <p>5</p>
+            </div>
+            <div class="price">
+              <p>price</p>
+              <p>250</p>
+            </div>
+            <button onclick="removeProduct(this)" class="xBtn">X</button>
+          </div>
+          <div class="productInfo">
+            <div class="btns">
+              <button class="PlusBtn">+</button>
+              <button class="minBtn">-</button>
+            </div>
+            <img src="../assets/team-1.png" alt="" />
+            <div class="titleAndqAndNum">
+              <h3>title</h3>
+              <p>Quantity</p>
+              <p>5</p>
+            </div>
+            <div class="price">
+              <p>price</p>
+              <p>250</p>
+            </div>
+            <button onclick="removeProduct(this)" class="xBtn">X</button>
+          </div>
+          <div class="productInfo">
+            <div class="btns">
+              <button class="PlusBtn">+</button>
+              <button class="minBtn">-</button>
+            </div>
+            <img src="" alt="" />
+            <div class="titleAndqAndNum">
+              <h3>title</h3>
+              <p>Quantity</p>
+              <p>5</p>
+            </div>
+            <div class="price">
+              <p>price</p>
+              <p>250</p>
+            </div>
+            <button onclick="removeProduct(this)" class="xBtn">X</button>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="footerOfCart">
+          <div class="total">
+            <h3>Subtotal Amounts:</h3>
+            <p class="Subtotal">26416</p>
+          </div>
+          <div class="check-out">
+            <a href="../check out/checkOut.html">CHECK OUT</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="back">
+        <a href="file:///C:/Users/Asa/Downloads/E-commerce/Users/ViewProducts/viewProduts.html"
+          ><i class="fa-solid fa-arrow-left"></i> Back to Shop</a
+        >
+      </div>
+      <div class="containerOfProduct">
+        <div class="product">
+          <div class="img" style="width: 30%">
+            <img src="" alt="" />
+          </div>
+          <div class="content" style="width: 70%">
+            <h2>t-shirt</h2>
+            <p class="des">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Accusamus, deleniti!
+            </p>
+
+            <p class="qun">Quantity:20</p>
+            <select name="size" id="">
+              <option value="">Select Your Size</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+              <option value="XXXL">XXXL</option>
+            </select>
+
+            <h4>Price: 80$</h4>
+            <button class="prodBtn" data-product-id="1">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="productDetails.js"></script>
+    <script>
+      
+      const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        modeToggle = document.querySelector(".dark-light"),
+        searchToggle = document.querySelector(".searchToggle"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+        let getMode = localStorage.getItem("mode");
+            if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+        // js code to toggle dark and light mode
+       
+      
+        //js code to toggle sidebar
+        sidebarOpen.addEventListener("click" , () =>{
+            nav.classList.add("active");
+        });
+        body.addEventListener("click" , e =>{
+            let clickedElm = e.target;
+            if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+                nav.classList.remove("active");
+            }
+        });
+
+
+    </script>
+  </body>
+</html>

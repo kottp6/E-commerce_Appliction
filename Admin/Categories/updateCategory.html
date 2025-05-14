@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Category</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+
+<body>
+
+    <div class="parent-category">
+        <div class="category-container">
+            <h2>Update Product</h2>
+            <form id="addCategoryForm">
+                <input class="Cate-input" type="text" id="category-id" placeholder="Category ID" required>
+                <input class="Cate-input" type="text" id="category-name" placeholder="Category Name" required>
+                <input class="Cate-input" type="text" id="category-slug" placeholder="Category Slug" required>
+                <input class="Cate-input" type="text" id="category-image"  placeholder="Image of Category" required>
+                <button class="Cate-button" type="button"  onclick="updateData(event)">Update Category</button>
+            </form>
+            <!-- <div id="successMessage" class="success-message" style="display: none;">
+                ✅ Product added successfully!
+            </div>  -->
+
+            <!-- <div id="errorMessage" style="display: none; color: red;"></div>
+            <div id="successMessage" style="display: none; color: green;">Product added successfully!</div> -->
+        </div>
+    </div>
+    <script src="js/categories.js"></script>
+</body>
+</html>
